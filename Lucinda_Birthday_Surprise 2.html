@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080d24">
+<title>إلى لوسيندا ✦ من ريميوس</title>
+<style>
+:root{--gold:#f5d78b;--gold2:#c99b43;--ink:#080d24;--blue:#111d45;--cream:#fff6df}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--cream);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;background:radial-gradient(ellipse at 50% 0%,#243568 0%,#101938 42%,#070b1d 100%);min-height:100vh;overflow-x:hidden}
+#stars{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.wrap{position:relative;z-index:1;width:min(760px,100%);margin:auto;padding:28px 18px 54px}
+.hero{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.eyebrow{color:var(--gold);letter-spacing:.16em;font-size:.8rem;margin-bottom:16px}
+.eagle{width:138px;height:110px;filter:drop-shadow(0 0 20px #f5d78b35);margin-bottom:12px}
+h1{font-size:clamp(2.3rem,9vw,4.7rem);line-height:1.15;margin:4px 0;color:var(--gold);font-weight:800;text-shadow:0 0 28px #d9ad5540}
+.sub{font-size:1.08rem;line-height:1.9;color:#e7e5f3;max-width:540px;margin:12px auto 26px}
+button,.open-link{display:inline-block;font:inherit;cursor:pointer;text-decoration:none;border:1px solid #f5d78b9c;border-radius:999px;background:linear-gradient(135deg,#f5d78b,#c18b35);color:#15152a;padding:14px 24px;font-weight:800;box-shadow:0 8px 28px #d9ad5528;transition:transform .2s}
+button:active{transform:scale(.97)}
+.hint{font-size:.83rem;color:#b8c0df;margin-top:14px}
+.card{border:1px solid #d8b56c66;background:linear-gradient(145deg,#111a38eF,#0b1029f2);border-radius:24px;padding:clamp(22px,5vw,42px);box-shadow:0 18px 60px #0005;margin:20px 0;position:relative;overflow:hidden}
+.card:before{content:"✦ 𓂀 ✦";position:absolute;top:12px;left:18px;color:#d7b35d45;font-size:1.15rem;letter-spacing:.25em}
+.section-title{color:var(--gold);font-size:1.5rem;margin:0 0 18px}
+.message{font-size:1.06rem;line-height:2.15;white-space:pre-line;color:#fff8e8}
+.message p{margin:0 0 14px}
+.sig{color:var(--gold);font-size:1.3rem;font-weight:800;margin-top:24px}
+.divider{display:flex;align-items:center;gap:12px;color:var(--gold);margin:26px 0}
+.divider:before,.divider:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,#c99b43aa,transparent)}
+.wish{font-size:1.1rem;line-height:2;text-align:center;color:#f3e8c9}
+.footer{text-align:center;color:#9da9ce;font-size:.82rem;line-height:1.9;margin-top:28px}
+.hidden{display:none!important}
+.reveal{animation:rise .8s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* إضافات الحركة والصوت */
+.sound-toggle{position:fixed;z-index:5;top:14px;left:14px;padding:10px 14px;font-size:.88rem;background:#101a3ee8;color:var(--gold);border-color:#f5d78b80;backdrop-filter:blur(10px)}
+.eagle{animation:eagleFloat 4s ease-in-out infinite, eagleGlow 3s ease-in-out infinite alternate}
+h1{animation:titleGlow 3.5s ease-in-out infinite alternate}
+.eyebrow{animation:fadeDown 1.2s ease both}
+.hero .sub{animation:rise 1.2s .2s both}
+.open-link{animation:buttonPulse 2.8s ease-in-out infinite}
+.card{animation:rise 1.1s ease both}
+.card:after{content:"";position:absolute;top:-30%;left:-60%;height:160%;width:35%;background:linear-gradient(90deg,transparent,#fff5cf0d,transparent);transform:rotate(18deg);animation:shimmer 8s linear infinite;pointer-events:none}
+.message{position:relative;z-index:1}
+.floating-heart{position:fixed;z-index:8;pointer-events:none;font-size:20px;animation:heartRise 2.4s ease-out forwards;filter:drop-shadow(0 0 8px #ffb9df88)}
+.shooting-star{position:fixed;z-index:0;width:100px;height:2px;background:linear-gradient(90deg,#ffe9a8,transparent);border-radius:100%;transform:rotate(-35deg);pointer-events:none;animation:shoot 1.3s ease-out forwards}
+@keyframes eagleFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(1deg)}}
+@keyframes eagleGlow{from{filter:drop-shadow(0 0 8px #f5d78b20)}to{filter:drop-shadow(0 0 25px #f5d78b80)}}
+@keyframes titleGlow{from{text-shadow:0 0 14px #d9ad5530}to{text-shadow:0 0 32px #f5d78b88,0 0 55px #6b8dff35}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes buttonPulse{0%,100%{box-shadow:0 8px 28px #d9ad5528}50%{box-shadow:0 8px 34px #f5d78b70}}
+@keyframes shimmer{0%{left:-70%}100%{left:140%}}
+@keyframes heartRise{0%{opacity:0;transform:translate(0,0) scale(.5) rotate(0)}15%{opacity:1}100%{opacity:0;transform:translate(var(--dx),-180px) scale(1.5) rotate(25deg)}}
+@keyframes shoot{0%{opacity:0;transform:translate(0,0) rotate(-35deg)}15%{opacity:1}100%{opacity:0;transform:translate(-220px,180px) rotate(-35deg)}}
+@media(prefers-reduced-motion:reduce){.eagle,h1,.eyebrow,.hero .sub,.open-link,.card:after{animation:none!important}}
+
+
+/* Romantic candlelight, roses, drifting hearts and butterfly kiss */
+:root{--rose:#ffc8d9;--blush:#ffe7ef;--candle:#ffe7ad}
+body{
+ background:
+ radial-gradient(ellipse at 50% 12%,rgba(128,68,112,.35),transparent 42%),
+ radial-gradient(ellipse at 50% 85%,rgba(123,43,74,.24),transparent 45%),
+ linear-gradient(160deg,#100e29 0%,#20132d 48%,#090d22 100%);
+}
+.card{border-color:#f2bfd65c;background:linear-gradient(145deg,rgba(37,22,48,.94),rgba(12,15,38,.96));box-shadow:0 18px 65px #0006,0 0 30px #f2a7c20b}
+h1{color:#ffe0ad;text-shadow:0 0 22px #ffb6d14c,0 0 48px #f5d78b2a}
+.eyebrow{color:#ffd5e3;letter-spacing:.08em}
+.open-link{background:linear-gradient(135deg,#ffe6b2,#f1b9ce 55%,#d99bbf);border-color:#ffe8c5;color:#32172d}
+.message{color:#fff7f2}
+.wish{color:#ffe4ed}
+.romance-decor{position:fixed;inset:0;pointer-events:none;z-index:2;overflow:hidden}
+.candle-row{position:fixed;bottom:max(8px,env(safe-area-inset-bottom));left:0;right:0;z-index:2;display:flex;justify-content:space-around;align-items:flex-end;pointer-events:none;opacity:.94}
+.candle{position:relative;width:15px;height:66px;border-radius:5px 5px 3px 3px;background:linear-gradient(90deg,#9b6272,#fff0d5 28%,#ffe5bc 65%,#a86c80);box-shadow:inset 0 -8px 10px #a44e6644,0 0 18px #ffb7cc19}
+.candle:nth-child(2),.candle:nth-child(4){height:45px;width:12px}
+.candle:nth-child(3){height:57px;width:14px}
+.flame{position:absolute;width:12px;height:21px;left:50%;top:-22px;transform:translateX(-50%);border-radius:55% 45% 55% 45%;background:radial-gradient(ellipse at 50% 68%,#fffef0 0 15%,#ffe7a0 35%,#ffad67 66%,#ff6d8c00 75%);filter:drop-shadow(0 0 8px #ffca82) drop-shadow(0 0 17px #ff8fbd88);transform-origin:50% 90%;animation:flameDance 1.3s ease-in-out infinite alternate}
+.candle:nth-child(even) .flame{animation-delay:-.6s;animation-duration:1.05s}
+.candle:after{content:"";position:absolute;left:50%;top:-3px;width:2px;height:7px;background:#493044;transform:translateX(-50%);border-radius:2px}
+.candle{animation:candleGlow 2.1s ease-in-out infinite alternate}
+.candle:nth-child(2){animation-delay:-.7s}.candle:nth-child(3){animation-delay:-1.2s}.candle:nth-child(4){animation-delay:-.35s}
+.flame{animation:flameDance .72s ease-in-out infinite alternate, flamePulse 1.8s ease-in-out infinite}
+.candle:nth-child(even) .flame{animation-duration:.58s,1.25s}
+@keyframes candleGlow{0%{filter:brightness(.78);box-shadow:inset 0 -8px 10px #a44e6644,0 0 7px #ffb7cc0c}45%{filter:brightness(1.15);box-shadow:inset 0 -8px 10px #a44e6644,0 0 24px #ffb7cc36}70%{filter:brightness(.9)}100%{filter:brightness(1.22);box-shadow:inset 0 -8px 10px #a44e6644,0 0 30px #ffb7cc45}}
+@keyframes flamePulse{0%,100%{filter:drop-shadow(0 0 5px #ffca82) drop-shadow(0 0 10px #ff8fbd55);opacity:.72}50%{filter:drop-shadow(0 0 12px #ffca82) drop-shadow(0 0 24px #ff8fbdcc);opacity:1}}
+.rose-petal{position:fixed;top:-30px;z-index:3;pointer-events:none;font-size:18px;animation:petalFall linear forwards;filter:drop-shadow(0 0 5px #ffb0c4)}
+.heart-bubble{position:fixed;z-index:1;pointer-events:none;bottom:-35px;font-size:17px;opacity:0;animation:heartDrift 8s ease-in forwards;filter:drop-shadow(0 0 7px #ff9fc5aa)}
+.butterfly-scene{position:fixed;inset:0;z-index:9;pointer-events:none;overflow:hidden}
+.butterfly{position:absolute;left:-70px;top:48%;font-size:44px;filter:drop-shadow(0 0 12px #ffd6e8);opacity:0;transform-origin:center;animation:butterflyJourney 13s cubic-bezier(.45,.05,.55,.95) forwards}
+.butterfly:after{content:"💋";position:absolute;font-size:22px;left:50%;top:50%;opacity:0;transform:translate(-50%,-50%) scale(.3);filter:drop-shadow(0 0 8px #ffabc9)}
+.butterfly.kiss:after{animation:kissPop 1.25s ease 7s forwards}
+.butterfly.two{font-size:36px;animation-delay:1.7s;top:60%;filter:drop-shadow(0 0 10px #c6d6ff)}
+@keyframes flameDance{from{transform:translateX(-50%) rotate(-5deg) scale(.96,1.02)}to{transform:translateX(-50%) rotate(5deg) scale(1.06,.94)}}
+@keyframes petalFall{0%{opacity:0;transform:translate3d(0,-5vh,0) rotate(0)}10%{opacity:.9}100%{opacity:0;transform:translate3d(var(--drift),110vh,0) rotate(650deg)}}
+@keyframes heartDrift{0%{opacity:0;transform:translateY(0) scale(.65) rotate(-8deg)}12%{opacity:.75}75%{opacity:.6}100%{opacity:0;transform:translateY(-115vh) scale(1.35) rotate(22deg)}}
+@keyframes butterflyJourney{
+  0%{opacity:0;left:-12%;top:58%;transform:translate(0,0) rotate(-14deg) scale(.65)}
+  8%{opacity:1}
+  25%{left:27%;top:35%;transform:translate(0,0) rotate(9deg) scale(.9)}
+  37%{left:48%;top:43%;transform:translate(-50%,-50%) rotate(-4deg) scale(1)}
+  48%{left:50%;top:47%;transform:translate(-50%,-50%) rotate(2deg) scale(1.05)}
+  57%{left:50%;top:47%;transform:translate(-50%,-50%) rotate(0) scale(1.9)}
+  68%{left:50%;top:47%;transform:translate(-50%,-50%) rotate(5deg) scale(1.2)}
+  82%{left:78%;top:27%;transform:translate(0,0) rotate(16deg) scale(.9);opacity:1}
+  100%{left:112%;top:10%;transform:translate(0,0) rotate(25deg) scale(.5);opacity:0}
+}
+@keyframes kissPop{0%{opacity:0;transform:translate(-50%,-50%) scale(.3)}30%{opacity:1;transform:translate(-50%,-100%) scale(1.35)}70%{opacity:1;transform:translate(-50%,-100%) scale(1)}100%{opacity:0;transform:translate(-50%,-160%) scale(.7)}}
+@media(max-width:480px){.candle{height:47px}.candle:nth-child(2),.candle:nth-child(4){height:34px}.candle:nth-child(3){height:41px}.butterfly{font-size:38px}}
+@media(prefers-reduced-motion:reduce){.flame,.rose-petal,.heart-bubble,.butterfly{animation:none!important}}
+
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+
+<div class="romance-decor" aria-hidden="true"></div>
+<div class="candle-row" aria-hidden="true">
+  <div class="candle"><i class="flame"></i></div>
+  <div class="candle"><i class="flame"></i></div>
+  <div class="candle"><i class="flame"></i></div>
+  <div class="candle"><i class="flame"></i></div>
+  <div class="candle"><i class="flame"></i></div>
+</div>
+<div class="butterfly-scene" aria-hidden="true"></div>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">رسالة من القلب ✦ إلى روح غالية</div>
+    <svg class="eagle" viewBox="0 0 240 180" role="img" aria-label="نسر ذهبي">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0b7"/><stop offset=".5" stop-color="#e7bd61"/><stop offset="1" stop-color="#a87525"/></linearGradient></defs>
+      <g fill="none" stroke="url(#g)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M120 72 C93 40 58 31 12 38 C35 55 48 74 62 90 C42 85 27 88 8 100 C47 101 73 116 98 129 L120 110 L142 129 C167 116 193 101 232 100 C213 88 198 85 178 90 C192 74 205 55 228 38 C182 31 147 40 120 72Z"/>
+        <path d="M120 69 L120 134 M98 129 L89 151 L120 139 L151 151 L142 129"/>
+        <path d="M104 81 L76 63 M99 94 L63 79 M91 105 L53 96 M136 81 L164 63 M141 94 L177 79 M149 105 L187 96"/>
+        <path d="M109 72 L120 60 L131 72 L127 93 L120 101 L113 93Z"/>
+        <path d="M114 101 L120 111 L126 101"/>
+      </g>
+      <circle cx="120" cy="84" r="2.5" fill="#fff0b7"/>
+    </svg>
+    <h1>لوسيندا</h1>
+    <div class="sub">فيه لحظات بتعدّي من التقويم…<br>لكن مكانتك عمرها ما بتعدّي من القلب.</div>
+    <a class="open-link" href="#letter">افتحي رسالتك يا لوسيندا ✨</a>
+    <div class="hint">من ريميوس، بكل الحب والصدق</div>
+  </section>
+
+  <section id="letter" class="card">
+    
+    <div class="message">لوسيندا❤️🥹
+
+أنا عارف إن عيد ميلادك كان امبارح، وعارف إنك كنتِ مستنياني أكون أول واحد يقولك كل سنة وإنتِ طيبة، قبل كل الناس… وده بالذات اللي مخليني زعلان من نفسي لدرجة الصدمة والله. 💔🥀
+
+أنا مش هحاول أبررلك إني نسيت، ولا هقولك إن التأخير مش مهم؛ لأنك كنتِ مستنياني، وأنا فاهم إن اللي وجعك مش مجرد رسالة متأخرة. وعارف إن الموضوع مش فارق معاكي فيه يوم الميلاد ولا الاحتفال ولا كل ده، لكن اللي يوجع بجد إن اللحظة اللي كنتِ مستنياها مني عدّت من غير ما أكون موجود فيها… وده اللي واجعني ومخليني مش مستوعب إني عملت كده. 😔💔
+
+حقك عليّا يا لوسيندا… أنا آسف بجد يا حبيبتي. 🫂❤️‍🩹
+
+كنت أتمنى أكون أول صوت تسمعيه، وأول حد يرسم ابتسامة على وشك في يوم ميلادك، وأول حد يفكرك قد إيه وجودك غالي عندي. 🥹❤️
+
+عارفة؟ أنا كل حياتي ودنيتي ووقتي ونفسي وجسدي وكل ذرة فيّا ملكك، وإنتِ متأكدة إن ده مش مجرد كلام… ومع ذلك أنا عارف إن كل ده مش مبرر للي حصل، يا أجمل وأرق حاجة خلقها ربنا. 🫂❤️
+
+مش هطلب منك تنسي زعلك بكلمتين، ومش هتعامل مع عيد ميلادك كأنه يوم عادي أقدر أعوضه بكلمة وخلاص. أنا عايز أعملك لحظة تخصك إنتِ، وأحتفل بيكي بالطريقة اللي تستاهليها، حتى لو اليوم عدى… لأنك تستاهلي فرحتك كاملة، وتستاهلي تحسي قد إيه إنتِ غالية ومهمة عندي.❤️❤️
+
+كل سنة وإنتِ لوسيندا بتاعتي، وكل سنة وضحكتك منورة دنيتي، وكل سنة وإنتِ ليكي مكانة مش محتاجة يوم في السنة علشان أثبتها… لكن كان لازم أكون موجود في اليوم ده تحديدًا، وأنا قصّرت. 🥹💗
+
+سامحيني يا أرق حاجة اتخلقت في دنيتي والدنيا كلها… مش علشان أنا زعلان من نفسي وبس، لكن علشان مش عايز زعلك يفضل جواكي من غير ما تعرفي إني حاسس بيه، وإن آخر حاجة كنت أتمنى أكون سبب فيها هي إن قلبي يوجع قلبك. 💔🫂
+
+وصدقيني والله، الزعل اللي جوايا أكبر بكتير جدًا من أي كلام أو مشاعر أقدر أبينها… أنا لسه في صدمة من نفسي، ومش هنسى الموقف ده، ومش هعدّيه كأنه عادي، ووعد مني إني هتعلم من اللي حصل، وهعمل كل اللي أقدر عليه علشان ما يتكررش.
+
+إنتِ عارفة إن وقتي كله ملكك، وإن أنا كلي ملكك… وده مش كلام بقوله علشان أرضيكي، دي حقيقة إنتِ عارفاها من قلبي ومن كل حاجة بينا. ❤️🫂
+
+بحبك يا أغلى وأجمل وأرق ما شافت عيني، وأجمل وأنقى ما ودني سمعت، وأحنّ وأجمل مشاعر قلبي حسّ بيها… وأجمل نبض ونَفَس برتاح لما أسمعه. 🥹❤️
+
+إنتِ كل حاجة حلوة في دنيتي، وأغلى حاجة موجودة في قلبي، وأرق وأجمل إنسانة اتخلقت… لا حد اتوجد قبلك يشبهك، ولا هيكون بعدك حد زيك يا شاهندتي. 🥹🫂❤️
+
+عيد ميلاد سعيد يا لوسيندتي، حتى لو جيت متأخر… أنا لسه عايز أعيش معاكي فرحتك، وأشوف ضحكتك، وأعوّضك عن اللحظة اللي قصّرت فيها معاكي على قد ما أقدر. 🎂❤️
+
+وبدل احتفال 1/3… أجمل يوم في السنة، وأجمل لحظة رجّعتني للحياة؛ يوم معرفتي بيكي، وفضل ربنا وكرمه عليّا بأكبر نعمة ادّاهالي، وهي دخولك حياتي. 🥹❤️
+
+والذكرى التالتة اللي جمعتنا سوا… ذكرى غالية على قلبي، لأنها بتفكرني ببداية حكايتنا وبكل المشاعر واللحظات اللي بقيتي فيها جزء من روحي ودنيتي. ♾️💗🫂
+
+بحبك يا أجمل ما لمست روحي وقلبي… يا لوسيندتي، يا شاهندتي، يا أغلى نعمة في حياتي. 💋💋💋🫂❤️‍🔥
+
+كل سنة وإنتِ حبيبتي، وكل سنة وإنتِ أقرب لقلبي من أي حاجة في الدنيا… وكل سنة وأنا بحمد ربنا إنك في حياتي. ❤️♾️</div>
+    <div class="divider">𓂀 ✦ 𓋹</div>
+    <div class="wish">أتمنى سنتك الجديدة تكون مليانة نور وطمأنينة وفرح،<br>وإن كل أمنية مخبياها جوا قلبك تلاقي طريقها للنور.</div>
+    <div class="sig">— ريميوس</div>
+  </section>
+
+  <section class="card" id="promise">
+    <h2 class="section-title">أمنية من قلبي ليكي</h2>
+    <p class="wish">مش هقدر أرجّع اللحظة اللي فاتت، لكن أقدر أكون حاضر بصدق في اللحظات اللي جاية. إنتِ تستاهلي الاهتمام، مش في يوم ميلادك بس… في كل يوم.</p>
+    <div style="text-align:center;margin-top:24px"><button id="againBtn">اقرئي الرسالة مرة تانية ♥</button></div>
+  </section>
+  <div class="footer">صُنعت خصيصًا للوسيندا ✦<br>نجمة متأخرة في السماء… لكنها لم تنطفئ.</div>
+</main>
+<script>
+const canvas=document.getElementById('stars'),ctx=canvas.getContext('2d');let w,h,stars=[];
+function resize(){w=canvas.width=innerWidth*devicePixelRatio;h=canvas.height=innerHeight*devicePixelRatio;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';stars=Array.from({length:Math.min(150,Math.floor(innerWidth/5))},()=>({x:Math.random()*w,y:Math.random()*h,r:(Math.random()*1.5+.3)*devicePixelRatio,a:Math.random(),s:Math.random()*.012+.003}));}
+function draw(){ctx.clearRect(0,0,w,h);for(const p of stars){p.a+=p.s;if(p.a>1)p.a=0;ctx.globalAlpha=.25+Math.abs(Math.sin(p.a*Math.PI))*0.7;ctx.fillStyle='#ffe9ae';ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()}ctx.globalAlpha=1;requestAnimationFrame(draw)}
+addEventListener('resize',resize);resize();draw();
+const letter=document.getElementById('letter');
+document.getElementById('againBtn').addEventListener('click',()=>{letter.scrollIntoView({behavior:'smooth',block:'start'})});
+</script>
+
+<script>
+/* صوت سماوي بسيط من نغمات مولّدة داخل الصفحة؛ لا يحتاج ملفًا خارجيًا */
+(function(){
+ let audioCtx=null, master=null, playing=false, timer=null, noteIndex=0;
+ const notes=[261.63,329.63,392.00,523.25,392.00,329.63,293.66,349.23,440.00,587.33,440.00,349.23];
+ function chime(freq,when,duration,volume){
+   if(!audioCtx||!master)return;
+   const osc=audioCtx.createOscillator(), gain=audioCtx.createGain();
+   osc.type='sine';osc.frequency.setValueAtTime(freq,when);
+   gain.gain.setValueAtTime(.0001,when);
+   gain.gain.exponentialRampToValueAtTime(volume,when+.08);
+   gain.gain.exponentialRampToValueAtTime(.0001,when+duration);
+   osc.connect(gain);gain.connect(master);osc.start(when);osc.stop(when+duration+.03);
+ }
+ function melody(){
+   if(!playing||!audioCtx)return;
+   const now=audioCtx.currentTime;
+   chime(notes[noteIndex%notes.length],now,2.2,.055);
+   if(noteIndex%3===0)chime(notes[(noteIndex+2)%notes.length]/2,now,.95,.025);
+   noteIndex++;
+ }
+ async function startSound(){
+   if(playing)return;
+   const AC=window.AudioContext||window.webkitAudioContext;
+   if(!AC)return;
+   try{
+     audioCtx=audioCtx||new AC();
+     if(audioCtx.state==='suspended')await audioCtx.resume();
+     master=master||audioCtx.createGain();master.gain.value=.45;master.connect(audioCtx.destination);
+     playing=true;melody();timer=setInterval(melody,1450);
+   }catch(err){ /* بعض معاينات الملفات تمنع تشغيل الصوت */ }
+ }
+ function hearts(x,y,count=7){
+   const icons=['💛','✨','💗','𓋹','💫'];
+   for(let i=0;i<count;i++){
+     const el=document.createElement('span');el.className='floating-heart';
+     el.textContent=icons[Math.floor(Math.random()*icons.length)];
+     el.style.left=(x+(Math.random()*70-35))+'px';el.style.top=(y+(Math.random()*25-12))+'px';
+     el.style.setProperty('--dx',(Math.random()*130-65)+'px');
+     el.style.animationDelay=(Math.random()*.25)+'s';
+     document.body.appendChild(el);setTimeout(()=>el.remove(),2800);
+   }
+ }
+ document.addEventListener('click',e=>{
+   if(e.target.closest('button,a'))hearts(e.clientX,e.clientY,9);
+ });
+ function shooting(){
+   const el=document.createElement('i');el.className='shooting-star';
+   el.style.top=(Math.random()*innerHeight*.6)+'px';
+   el.style.left=(Math.random()*innerWidth*.9)+'px';
+   document.body.appendChild(el);setTimeout(()=>el.remove(),1400);
+ }
+ setInterval(shooting,4200);
+ const openLink=document.querySelector('.open-link');
+ openLink.addEventListener('click',()=>{
+   startSound();
+   setTimeout(()=>document.getElementById('letter').scrollIntoView({behavior:'smooth',block:'start'}),80);
+   hearts(innerWidth/2,innerHeight*.72,20);
+ });
+})();
+</script>
+
+
+/* تفاصيل رومانسية خفيفة: بتلات ورد وقلوب وفراشات تقرّب وتطبع قبلة ثم تطير */
+(function(){
+ const decor=document.querySelector('.romance-decor');
+ const butterflyScene=document.querySelector('.butterfly-scene');
+ const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(reduced)return;
+ function petal(){
+   const el=document.createElement('span');el.className='rose-petal';
+   el.textContent=['🌹','🌸','🌷','✿'][Math.floor(Math.random()*4)];
+   el.style.left=(Math.random()*100)+'vw';
+   el.style.setProperty('--drift',(Math.random()*180-90)+'px');
+   const duration=8+Math.random()*7;el.style.animationDuration=duration+'s';
+   el.style.fontSize=(12+Math.random()*13)+'px';
+   decor.appendChild(el);setTimeout(()=>el.remove(),duration*1000+100);
+ }
+ function heart(){
+   const el=document.createElement('span');el.className='heart-bubble';
+   el.textContent=['♡','♥','💗','💕','💖'][Math.floor(Math.random()*5)];
+   el.style.left=(Math.random()*96+2)+'vw';
+   el.style.animationDuration=(7+Math.random()*5)+'s';
+   el.style.fontSize=(13+Math.random()*16)+'px';
+   decor.appendChild(el);setTimeout(()=>el.remove(),13000);
+ }
+ function butterfly(){
+   const el=document.createElement('span');el.className='butterfly kiss';
+   el.textContent='🦋';
+   butterflyScene.appendChild(el);
+   setTimeout(()=>el.remove(),13500);
+ }
+ setInterval(petal,1250);setInterval(heart,1450);
+ function butterflyPair(){
+   butterfly();
+   setTimeout(()=>{
+     const el=document.createElement('span');el.className='butterfly two';
+     el.textContent='🦋';butterflyScene.appendChild(el);
+     setTimeout(()=>el.remove(),13500);
+   },1700);
+ }
+ setTimeout(butterflyPair,900);
+ setInterval(butterflyPair,14500);
+ function loveBurst(){
+   for(let i=0;i<12;i++)setTimeout(petal,i*100);
+   for(let i=0;i<8;i++)setTimeout(heart,i*130);
+ }
+ document.querySelectorAll('.open-link,#againBtn').forEach(btn=>btn.addEventListener('click',loveBurst));
+ // إعادة تشغيل المشهد من أوله عند اختيار «اقرئي الرسالة مرة تانية».
+ const again=document.getElementById('againBtn');
+ if(again)again.addEventListener('click',()=>{
+   butterflyScene.replaceChildren();
+   window.scrollTo({top:0,behavior:'smooth'});
+   setTimeout(butterflyPair,450);
+   setTimeout(()=>{document.querySelectorAll('.candle').forEach(c=>{
+     c.style.animation='none';void c.offsetWidth;c.style.animation='';
+   });},150);
+ });
+})();
+
+</body>
+</html>
